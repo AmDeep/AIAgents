@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-trace-lab"
+version = "0.1.0"
+description = "Structured local trace events and cost aggregation"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+trace-demo = "agent_trace_lab.demo:main"
+
+[tool.setuptools]
+packages = ["agent_trace_lab"]
+
+[tool.setuptools.package-dir]
+agent_trace_lab = "."

@@ -1,0 +1,12 @@
+flowchart LR
+  U[Current request] --> C[Context assembler]
+  P[Fixed system policy] --> C
+  H[Recent turns] --> C
+  S[TaskSummary: goal and constraints first] --> C
+  DB[(SQLite long-term memory)] --> R[Tag retrieval and priority ranking]
+  R --> C
+  C --> B{Estimated budget fits?}
+  B -->|Yes| M[Selected context with source labels]
+  B -->|No for required system| X[Fail explicitly]
+  M --> L[Model adapter boundary]
+  N[Target tokenizer replaces demo estimate] -. production change .-> B

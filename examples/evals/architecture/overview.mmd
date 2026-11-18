@@ -1,0 +1,10 @@
+flowchart TD
+  DS[Versioned case set] --> RUN[Eval runner]
+  SYS[System under test] --> RUN
+  RUN --> SAFE{Exception?}
+  SAFE -->|Yes| FAIL[Named error result]
+  SAFE -->|No| CMP[Compare actual and expected]
+  CMP --> CASE[Per-case result]
+  CASE --> CAT[Category score: regression / adversarial / normalization]
+  CAT --> REPORT[Review failures; update goldens deliberately]
+  PROD[Curated incidents and novel edge cases] --> DS

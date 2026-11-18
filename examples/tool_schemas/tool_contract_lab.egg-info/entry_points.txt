@@ -1,0 +1,2 @@
+[console_scripts]
+tool-contract-demo = tool_contract_lab.demo:main

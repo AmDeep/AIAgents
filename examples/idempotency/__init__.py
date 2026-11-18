@@ -1,0 +1,1 @@
+"""Idempotency and checkpoint example."""

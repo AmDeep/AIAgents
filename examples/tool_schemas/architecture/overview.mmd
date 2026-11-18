@@ -1,0 +1,14 @@
+sequenceDiagram
+  participant Caller
+  participant Boundary as Tool contract boundary
+  participant Parser as JSON parser
+  participant Validator as Exact-key/type validator
+  participant Handler as Local handler
+  Caller->>Boundary: JSON arguments
+  Boundary->>Parser: Parse with duplicate-key rejection
+  Parser-->>Boundary: Object or invalid_json
+  Boundary->>Validator: Check exact fields and enum
+  Validator-->>Boundary: Validated arguments or named error
+  Boundary->>Handler: Only validated request
+  Handler-->>Boundary: Result
+  Boundary-->>Caller: {ok:true,...} or {ok:false,error}

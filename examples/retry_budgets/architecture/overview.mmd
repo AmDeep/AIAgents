@@ -1,0 +1,17 @@
+stateDiagram-v2
+  [*] --> BudgetCheck
+  BudgetCheck --> Attempt: iteration and cost available
+  BudgetCheck --> Exhausted: limit reached
+  Attempt --> Success: operation returns
+  Attempt --> Failed: exception
+  Failed --> Stop: not retryable or attempts exhausted
+  Failed --> Backoff: retryable and attempts remain
+  Backoff --> BudgetCheck: capped exponential delay
+  Exhausted --> [*]
+  Success --> [*]
+  Stop --> [*]
+  note right of Backoff
+    Sleep is injected in tests.
+    No jitter or transport Retry-After
+    is implemented in this lab.
+  end note

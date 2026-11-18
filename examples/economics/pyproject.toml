@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inference-economics-lab"
+version = "0.1.0"
+description = "Local model-routing, cache, fan-out and percentile primitives"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+economics-demo = "inference_economics_lab.demo:main"
+
+[tool.setuptools]
+packages = ["inference_economics_lab"]
+
+[tool.setuptools.package-dir]
+inference_economics_lab = "."

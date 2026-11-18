@@ -1,0 +1,9 @@
+{
+  "module": "handoff-contract-lab.demo",
+  "command": [
+    "handoff-demo"
+  ],
+  "exit_code": 0,
+  "stdout": "accepted task=task-7 artifacts=1 unresolved=0\n",
+  "stderr": ""
+}

@@ -1,0 +1,9 @@
+{
+  "module": "tool-contract-lab.demo",
+  "command": [
+    "tool-contract-demo"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"ok\": true, \"ticket\": {\"id\": \"T-LOCAL-001\", \"priority\": \"normal\", \"title\": \"Check docs\"}}\n{\"error\": \"invalid_argument:$:additionalProperties\", \"ok\": false}\n",
+  "stderr": ""
+}

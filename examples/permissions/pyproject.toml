@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "authorization-boundary-lab"
+version = "0.1.0"
+description = "Deny-by-default local policy enforcement example"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+authorization-demo = "authorization_boundary_lab.demo:main"
+
+[tool.setuptools]
+packages = ["authorization_boundary_lab"]
+
+[tool.setuptools.package-dir]
+authorization_boundary_lab = "."

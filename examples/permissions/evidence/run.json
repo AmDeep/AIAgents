@@ -1,0 +1,9 @@
+{
+  "module": "authorization-boundary-lab.demo",
+  "command": [
+    "authorization-demo"
+  ],
+  "exit_code": 0,
+  "stdout": "allowed=fixture read\ndenied:write_production\n",
+  "stderr": ""
+}

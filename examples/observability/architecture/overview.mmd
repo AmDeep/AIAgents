@@ -1,0 +1,10 @@
+flowchart LR
+  RUN[Run root event] --> TOOL[Child tool event]
+  RUN --> MODEL[Model event]
+  TOOL --> TRACE[In-memory trace event list]
+  MODEL --> TRACE
+  TRACE --> JSONL[JSON Lines export]
+  TRACE --> COST[Run cost aggregation]
+  TRACE -. future adapter .-> SDK[OpenTelemetry SDK / exporter]
+  SDK -. external deployment .-> COLLECTOR[Collector and trace backend]
+  PRIV[Redaction and attribute policy] --> TRACE

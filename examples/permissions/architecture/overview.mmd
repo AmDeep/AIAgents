@@ -1,0 +1,11 @@
+flowchart LR
+  I[Authenticated identity] --> PEP[Policy enforcement point]
+  A[Action and resource] --> PEP
+  PEP --> PDP[Local allowlist decision]
+  PDP -->|deny| D[Audit denial; stop]
+  D -. no call .-> K[Credential provider]
+  PDP -->|allow| K
+  K --> H[Authorized handler]
+  H --> O[Observed result]
+  O --> AUD[Audit event]
+  PDP -. future external PDP adapter .-> OPA[OPA or organization policy service]

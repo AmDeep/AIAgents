@@ -1,0 +1,9 @@
+{
+  "module": "retry-budget-lab.demo",
+  "command": [
+    "retry-budget-demo"
+  ],
+  "exit_code": 0,
+  "stdout": "result=ok attempts=3 waits=[0.1, 0.2]\n",
+  "stderr": ""
+}

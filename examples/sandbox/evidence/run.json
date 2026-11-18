@@ -1,0 +1,9 @@
+{
+  "module": "trusted-fixture-runner-lab.demo",
+  "command": [
+    "fixture-runner-demo"
+  ],
+  "exit_code": 0,
+  "stdout": "returncode=0 stdout=isolated fixture ok\n",
+  "stderr": ""
+}

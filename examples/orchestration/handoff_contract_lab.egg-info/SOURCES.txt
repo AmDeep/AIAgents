@@ -1,0 +1,14 @@
+README.md
+__init__.py
+demo.py
+pyproject.toml
+test_demo.py
+./__init__.py
+./demo.py
+./test_demo.py
+handoff_contract_lab.egg-info/PKG-INFO
+handoff_contract_lab.egg-info/SOURCES.txt
+handoff_contract_lab.egg-info/dependency_links.txt
+handoff_contract_lab.egg-info/entry_points.txt
+handoff_contract_lab.egg-info/requires.txt
+handoff_contract_lab.egg-info/top_level.txt

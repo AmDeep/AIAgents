@@ -1,0 +1,2 @@
+[console_scripts]
+completion-check-demo = completion_verification_lab.demo:main

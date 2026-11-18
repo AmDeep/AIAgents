@@ -1,0 +1,9 @@
+{
+  "module": "agent-trace-lab.demo",
+  "command": [
+    "trace-demo"
+  ],
+  "exit_code": 0,
+  "stdout": "events=3 cost=0.005 names=run.start,tool.call,run.complete\n",
+  "stderr": ""
+}

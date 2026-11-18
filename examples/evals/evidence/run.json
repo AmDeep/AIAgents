@@ -1,0 +1,9 @@
+{
+  "module": "agent-eval-harness-lab.demo",
+  "command": [
+    "eval-harness-demo"
+  ],
+  "exit_code": 0,
+  "stdout": "basic: PASS [regression]\nwhitespace: PASS [normalization]\ninstruction-override: PASS [adversarial]\nscore=3/3\n",
+  "stderr": ""
+}

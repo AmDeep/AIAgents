@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="94" viewBox="0 0 760 94" role="img" aria-labelledby="title desc">
+<title id="title">retry_budgets demo stdout</title>
+<desc id="desc">Terminal-style rendering of standard output captured by running the project's demo.</desc>
+<style>text{font-family:Consolas,ui-monospace,monospace} .line{font-size:14px;fill:#d7e0ea} .head{font-size:13px;fill:#9fb0c1} .bg{fill:#111820} .bar{fill:#1e2a35}</style>
+<rect class="bg" x="0" y="0" width="100%" height="100%" rx="8"/>
+<path class="bar" d="M8 0h744a8 8 0 0 1 8 8v44H0V8a8 8 0 0 1 8-8z"/>
+<circle cx="22" cy="26" r="5" fill="#df756c"/><circle cx="40" cy="26" r="5" fill="#e2b764"/><circle cx="58" cy="26" r="5" fill="#78b88a"/>
+<text x="78" y="31" class="head">retry_budgets / captured stdout</text>
+<text x="28" y="74" class="line">result=ok attempts=3 waits=[0.1, 0.2]</text>
+</svg>

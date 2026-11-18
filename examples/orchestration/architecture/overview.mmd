@@ -1,0 +1,11 @@
+flowchart TB
+  R[Run request] --> ORCH[Supervisor / orchestrator]
+  ORCH --> ENV[Typed task envelope]
+  ENV --> W[Worker boundary]
+  W --> ART[Artifacts and declared actions]
+  W --> RESULT[Handoff result]
+  RESULT --> CHECK{Task ID, summary, unresolved work, action allowlist}
+  CHECK -->|accepted| VERIFY[Independent verifier]
+  CHECK -->|rejected| REVIEW[Return to orchestrator with explicit reason]
+  REF[(Context references)] --> ENV
+  CRIT[Acceptance criteria] --> ENV

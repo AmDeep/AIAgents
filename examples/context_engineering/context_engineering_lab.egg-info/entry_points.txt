@@ -1,0 +1,2 @@
+[console_scripts]
+context-memory-demo = context_engineering_lab.demo:main

@@ -1,0 +1,9 @@
+{
+  "module": "completion-verification-lab.demo",
+  "command": [
+    "completion-check-demo"
+  ],
+  "exit_code": 0,
+  "stdout": "verified=True checks=artifact_exists,tests_pass\n",
+  "stderr": ""
+}

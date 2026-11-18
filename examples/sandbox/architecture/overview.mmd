@@ -1,0 +1,11 @@
+flowchart LR
+  SRC[Trusted local fixture source] --> FILE[Temporary directory and fixture.py]
+  FILE --> PROC[Python isolated mode subprocess]
+  PROC --> OUT[stdout pipe drain]
+  PROC --> ERR[stderr pipe drain]
+  OUT --> CAP[Retain up to configured bytes; mark truncation]
+  ERR --> CAP
+  TIMER[Wall-clock timeout] --> PROC
+  CAP --> RESULT[Exit code, bounded output, truncation flags]
+  RESULT --> CLEAN[Temporary directory cleanup]
+  HOST[Container / VM / OS policy] -. required for untrusted code; not supplied .-> PROC

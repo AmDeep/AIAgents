@@ -1,0 +1,14 @@
+README.md
+__init__.py
+demo.py
+pyproject.toml
+test_demo.py
+./__init__.py
+./demo.py
+./test_demo.py
+inference_economics_lab.egg-info/PKG-INFO
+inference_economics_lab.egg-info/SOURCES.txt
+inference_economics_lab.egg-info/dependency_links.txt
+inference_economics_lab.egg-info/entry_points.txt
+inference_economics_lab.egg-info/requires.txt
+inference_economics_lab.egg-info/top_level.txt

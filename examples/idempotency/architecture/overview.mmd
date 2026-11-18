@@ -1,0 +1,15 @@
+sequenceDiagram
+  participant Client
+  participant Store as SQLite transaction
+  participant Op as Local operation
+  Client->>Store: execute_once(key)
+  Store->>Store: BEGIN IMMEDIATE; lookup key
+  alt key already recorded
+    Store-->>Client: Stored result, replay=true
+  else new key
+    Store->>Op: Execute inside transaction
+    Op-->>Store: Result mapping
+    Store->>Store: Insert key and result; COMMIT
+    Store-->>Client: Result, replay=false
+  end
+  Note over Client,Op: Remote effects need provider idempotency or reconciliation; this local transaction cannot cover them.

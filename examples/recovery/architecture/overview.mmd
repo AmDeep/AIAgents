@@ -1,0 +1,14 @@
+stateDiagram-v2
+  [*] --> Pending
+  Pending --> Running: started event
+  Running --> Running: step_completed event
+  Running --> Failed: failed event
+  Running --> Completed: completed event
+  Running --> Reconstructed: process restarts; replay log
+  Reconstructed --> Running: resume only unfinished work
+  Failed --> Reconstructed: operator recovery policy
+  Completed --> [*]
+  note right of Reconstructed
+    Current code reconstructs state and outputs.
+    It does not execute workflow steps on resume.
+  end note

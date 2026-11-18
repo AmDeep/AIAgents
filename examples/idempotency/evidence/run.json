@@ -1,0 +1,9 @@
+{
+  "module": "idempotency-ledger-lab.demo",
+  "command": [
+    "idempotency-demo"
+  ],
+  "exit_code": 0,
+  "stdout": "first_replay=False second_replay=True calls=1 result={'record_id': 'local-1'}\ncheckpoint={'record_id': 'local-1'}\n",
+  "stderr": ""
+}

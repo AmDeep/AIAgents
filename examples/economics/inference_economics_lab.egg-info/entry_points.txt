@@ -1,0 +1,2 @@
+[console_scripts]
+economics-demo = inference_economics_lab.demo:main

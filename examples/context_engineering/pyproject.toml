@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "context-engineering-lab"
+version = "0.1.0"
+description = "Budgeted context assembly and durable local memory example"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+context-memory-demo = "context_engineering_lab.demo:main"
+
+[tool.setuptools]
+packages = ["context_engineering_lab"]
+
+[tool.setuptools.package-dir]
+context_engineering_lab = "."

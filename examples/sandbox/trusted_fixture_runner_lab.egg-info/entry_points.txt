@@ -1,0 +1,2 @@
+[console_scripts]
+fixture-runner-demo = trusted_fixture_runner_lab.demo:main

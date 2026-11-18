@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/agent-systems-lab/create-ticket.input.schema.json",
+  "title": "Create ticket tool input",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Non-empty title; surrounding whitespace is trimmed by the handler."
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "normal", "high"]
+    }
+  },
+  "required": ["title", "priority"],
+  "additionalProperties": false
+}

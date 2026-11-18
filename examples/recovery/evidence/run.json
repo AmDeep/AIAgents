@@ -1,0 +1,9 @@
+{
+  "module": "run-recovery-lab.demo",
+  "command": [
+    "run-recovery-demo"
+  ],
+  "exit_code": 0,
+  "stdout": "status=running completed=inspect output=ok\n",
+  "stderr": ""
+}

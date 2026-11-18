@@ -1,0 +1,2 @@
+[console_scripts]
+idempotency-demo = idempotency_ledger_lab.demo:main

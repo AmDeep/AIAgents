@@ -1,0 +1,9 @@
+{
+  "module": "inference-economics-lab.demo",
+  "command": [
+    "economics-demo"
+  ],
+  "exit_code": 0,
+  "stdout": "route=small cache_hits=1 tools=2 p95_ms=50\n",
+  "stderr": ""
+}

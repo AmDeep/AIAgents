@@ -1,0 +1,12 @@
+flowchart LR
+  CLAIM[Completion claim] --> GATE{Claim says completed?}
+  GATE -->|No| FAIL[Reject: missing claim]
+  GATE -->|Yes| CHECKS[Independent postcondition checks]
+  CHECKS --> C1[Artifact exists]
+  CHECKS --> C2[Tests passed]
+  CHECKS --> C3[External state read-back]
+  C1 --> AGG[Collect named results]
+  C2 --> AGG
+  C3 --> AGG
+  AGG -->|At least one check and none failed| DONE[Verified completion]
+  AGG -->|Any failed or raised| RETRY[Incomplete / recovery path]

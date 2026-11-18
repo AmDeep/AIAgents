@@ -1,0 +1,2 @@
+[console_scripts]
+authorization-demo = authorization_boundary_lab.demo:main

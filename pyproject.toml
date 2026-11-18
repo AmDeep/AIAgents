@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-systems-lab"
+version = "0.1.0"
+description = "Runnable reference patterns for reliable agent systems"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8.0", "jsonschema>=4.23,<5"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["examples*"]
+
+[tool.pytest.ini_options]
+testpaths = ["examples"]
+python_files = ["test_*.py"]
+addopts = "-ra --strict-markers"

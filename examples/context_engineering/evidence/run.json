@@ -1,0 +1,9 @@
+{
+  "module": "context-engineering-lab.demo",
+  "command": [
+    "context-memory-demo"
+  ],
+  "exit_code": 0,
+  "stdout": "selected=system,memory:constraint-1,summary,recent-0\n[system] You are a local test agent.\n[memory:constraint-1] Never write to production. [source: local-policy.md]\n[summary] goal: Verify a local change\nconstraint: Never write to production.\nopen: Inspect the staging fixture.\n[recent-0] Inspect the staging fixture.\n",
+  "stderr": ""
+}

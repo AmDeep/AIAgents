@@ -1,0 +1,11 @@
+flowchart LR
+  REQ[Request complexity] --> ROUTE[Threshold router]
+  ROUTE --> SMALL[Small model adapter boundary]
+  ROUTE --> LARGE[Large model adapter boundary]
+  PROMPT[Model + prompt] --> CACHE[SHA-256 response cache key]
+  CACHE -->|hit| RESP[Cached result]
+  CACHE -->|miss| COMPUTE[Injected compute function]
+  TOOLS[Independent tool functions] --> FANOUT[Bounded thread pool]
+  FANOUT --> JOIN[Named result map]
+  LAT[Latency samples] --> PCT[Nearest-rank percentile]
+  TTFT[TTFT measurement] -. not currently implemented .-> LAT
